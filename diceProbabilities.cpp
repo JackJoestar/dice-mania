@@ -26,6 +26,8 @@ int main(){
 
   for(games = 0; games < 1001; games++){
     sum = dice[0].roll() + dice[1].roll();
+
+    //Odd
     choice = 1;
     
     if(sum % 2 == choice)
@@ -36,6 +38,8 @@ int main(){
   }
   for(games = 0; games < 1001; games++){
     sum = dice[0].roll() + dice[1].roll();
+
+    //Even
     choice = 0;
     
     if(sum % 2 == choice)
