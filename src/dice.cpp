@@ -1,6 +1,6 @@
 #include <random>
 #include <iostream>
-#include "dice.h"
+#include "./headers/dice.h"
 
 Dice::Dice(){}
 
