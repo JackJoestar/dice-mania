@@ -1,10 +1,6 @@
 #include "dice.h"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <stdlib.h>
 
-using namespace std;
 int games = 0;
 float oddWins = 0;
 float evenWins = 0;
@@ -52,9 +48,9 @@ int main(){
   float oddWinnings = oddWins / games;
   float evenWinnings = evenWins / games;
   
-  cout << "PROBABILITIES AFTER 1000 GAMES" << endl;
-  cout << "Always choose Odd: " << oddWinnings * 100 << "%" << endl;
-  cout << "Always choose Even: " << evenWinnings * 100 << "%" << endl;
+  std::cout << "PROBABILITIES AFTER 1000 GAMES" << std::endl;
+  std::cout << "Always choose Odd: " << oddWinnings * 100 << "%" << std::endl;
+  std::cout << "Always choose Even: " << evenWinnings * 100 << "%" << std::endl;
 
 
   return 0;
@@ -62,9 +58,9 @@ int main(){
 }
 
 void startMsg(){
-  cout <<"================================"<< endl;
- cout << "\tOdd or Even" << endl;
- cout <<"================================"<< endl;
+  std::cout <<"================================"<< std::endl;
+ std::cout << "\tOdd or Even" << std::endl;
+ std::cout <<"================================"<< std::endl;
 }
 
-void clrscr(){cout << "\033[2J\033[1;1H";}
+void clrscr(){std::cout << "\033[2J\033[1;1H";}

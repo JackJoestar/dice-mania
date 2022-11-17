@@ -1,10 +1,6 @@
 #include "dice.h"
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <stdlib.h>
 
-using namespace std;
 
 void clrscr();
 void startMsg();
@@ -35,7 +31,7 @@ int main(){
 
   while(player != -1){
     //First Roll The Dice then sort them
-  cin.get();
+  std::cin.get();
   
   for(int i = 0; i< 3; i++){
     dice[i].roll();
@@ -43,12 +39,12 @@ int main(){
   
   bubbleSort(dice, 3);
 
-  cout <<  "PLAYER " << player << " Rolling dice: ";
+  std::cout <<  "PLAYER " << player << " Rolling dice: ";
   for(int i = 0; i<3; i++){
-    cout << dice[i].getLastRoll() << " ";
+    std::cout << dice[i].getLastRoll() << " ";
     
   }
-  cout << endl;
+  std::cout << std::endl;
 
 
   
@@ -59,18 +55,18 @@ int main(){
   if(dice[0].getLastRoll() == 4 and
      dice[1].getLastRoll() == 5 and
      dice[2].getLastRoll() == 6){
-    cout << "PLAYER " << player << " IS THE WINNER!!" << endl;
+    std::cout << "PLAYER " << player << " IS THE WINNER!!" << std::endl;
     break;
   }else if(((dice[0].getLastRoll() == 
 	     dice[1].getLastRoll()) ==
 	    dice[2].getLastRoll())){
-    cout << "PLAYER " << player << " IS THE WINNER!!" << endl;
+    std::cout << "PLAYER " << player << " IS THE WINNER!!" << std::endl;
     break;
   }//Losing
   else if(dice[0].getLastRoll() == 1 and
      dice[1].getLastRoll() == 2 and
      dice[2].getLastRoll() == 3){
-    cout << "PLAYER " << player << " IS THE LOSER!!" << endl;
+    std::cout << "PLAYER " << player << " IS THE LOSER!!" << std::endl;
     break;
   }
 
@@ -88,12 +84,12 @@ int main(){
   }
 
   if(score1 > score2 and scoreSet1 and scoreSet2){
-    cout << "\nSCORE: " << score1 << "\t" << score2 << endl;
-    cout << "PLAYER 0 IS THE WINNER!!" << endl;
+    std::cout << "\nSCORE: " << score1 << "\t" << score2 << std::endl;
+    std::cout << "PLAYER 0 IS THE WINNER!!" << std::endl;
     break;
   }else if(score2 > score1 and scoreSet1 and scoreSet2){
-    cout << "\nSCORE: " << score1 << "\t" << score2 << endl;
-    cout << "PLAYER 1 IS THE WINNER!!" << endl;
+    std::cout << "\nSCORE: " << score1 << "\t" << score2 << std::endl;
+    std::cout << "PLAYER 1 IS THE WINNER!!" << std::endl;
     break;
   }else if(score1 == score2 and scoreSet1 and scoreSet2){
     player = 0;
@@ -123,12 +119,12 @@ int main(){
 }
 
 void startMsg(){
-  cout <<"======================================"<< endl;
- cout << "\tCEELO (Push Enter to roll!)" << endl;
- cout <<"======================================"<< endl;
+  std::cout <<"======================================"<< std::endl;
+ std::cout << "\tCEELO (Push Enter to roll!)" << std::endl;
+ std::cout <<"======================================"<< std::endl;
 }
 
-void clrscr(){cout << "\033[2J\033[1;1H";}
+void clrscr(){std::cout << "\033[2J\033[1;1H";}
 
 void bubbleSort(Dice arr[], int n){
   int i, j;
